@@ -34,10 +34,12 @@ jobs:
       - run: npm ci
 
       # Run tests
-      - run: npm test
+      - name: Run tests 
+        run: npm test
       
       # Transpile TypeScript and bundle application to /dist folder
-      - run: npm run build
+      - name: Build app
+        run: npm run build
       
       # Set up GitHub Pages and upload build artifact
       - name: Set up Pages
